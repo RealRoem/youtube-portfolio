@@ -1,6 +1,9 @@
+import { MotionConfig } from 'framer-motion'
 import { lazy, Suspense } from 'react'
 
 import { ErrorBoundary, LoadingFallback } from '@/app/components'
+import { Ticker } from '@/components'
+import { TICKER_ITEMS } from '@/constants'
 import { PageLayout } from '@/layouts'
 
 const HeroContainer = lazy(() => import('@/features/hero/containers/HeroContainer'))
@@ -15,18 +18,21 @@ const SponsorshipContainer = lazy(
 const ContactContainer = lazy(() => import('@/features/contact/containers/ContactContainer'))
 
 export const App = (): React.JSX.Element => (
-  <ErrorBoundary>
-    <PageLayout>
-      <main>
-        <Suspense fallback={<LoadingFallback />}>
-          <HeroContainer />
-          <AboutContainer />
-          <StatsContainer />
-          <FeaturedVideosContainer />
-          <SponsorshipContainer />
-          <ContactContainer />
-        </Suspense>
-      </main>
-    </PageLayout>
-  </ErrorBoundary>
+  <MotionConfig reducedMotion="user">
+    <ErrorBoundary>
+      <PageLayout>
+        <main>
+          <Suspense fallback={<LoadingFallback />}>
+            <HeroContainer />
+            <AboutContainer />
+            <StatsContainer />
+            <Ticker items={TICKER_ITEMS} />
+            <FeaturedVideosContainer />
+            <SponsorshipContainer />
+            <ContactContainer />
+          </Suspense>
+        </main>
+      </PageLayout>
+    </ErrorBoundary>
+  </MotionConfig>
 )

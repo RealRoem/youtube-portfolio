@@ -1,6 +1,13 @@
 export const COUNTER_DURATION_MS = 1200
 export const COUNTER_FRAME_MS = 16
-export const REVEAL_DURATION_SECONDS = 0.46
-export const REVEAL_DISTANCE_PX = 16
+export const REVEAL_DISTANCE_PX = 40
+export const REVEAL_START_SCALE = 0.9
+export const REVEAL_START_ROTATE_DEG = 2
+export const REVEAL_SPRING = { type: 'spring', stiffness: 260, damping: 14 } as const
 export const VIEWPORT_ONCE_AMOUNT = 0.24
-export const STAGGER_DELAY_SECONDS = 0.06
+export const STAGGER_DELAY_SECONDS = 0.08
+export const COIN_COUNT = 10
+export const COIN_MIN_DISTANCE_PX = 80
+export const COIN_MAX_DISTANCE_PX = 180
+export const COIN_LIFETIME_MS = 900
+export const LEVEL_UP_THRESHOLD = 0.97

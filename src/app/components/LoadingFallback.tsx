@@ -1,8 +1,8 @@
 export const LoadingFallback = (): React.JSX.Element => (
   <div
     aria-label="Loading portfolio section"
-    className="flex min-h-40 items-center justify-center bg-obsidian-950 text-frost-300"
+    className="flex min-h-40 items-center justify-center bg-ink-950 text-paper-300"
   >
-    <span className="h-3 w-3 animate-ping rounded-full bg-ember-400" />
+    <span className="h-4 w-4 animate-ping rounded-sm bg-coin-300" />
   </div>
 )

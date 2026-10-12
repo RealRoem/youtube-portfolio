@@ -39,13 +39,11 @@ export const stats: readonly StatItem[] = [
     label: 'YouTube subscribers',
     value: 35200,
     suffix: '+',
-    description: 'Players who come to me for Roblox tycoon guides, tips, and progression.',
   },
   {
     label: 'Lifetime views',
     value: 11200000,
     suffix: '+',
-    description: 'Most of my best videos keep getting found because people search for help.',
   },
   {
     label: 'Discord members',
@@ -58,7 +56,6 @@ export const stats: readonly StatItem[] = [
     label: 'Published videos',
     value: 85,
     suffix: '+',
-    description: 'Mostly Roblox tycoon, simulator, guide, and challenge content.',
   },
 ]
 
