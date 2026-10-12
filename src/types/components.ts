@@ -44,3 +44,19 @@ export interface StatCardProps {
 export interface VideoCardProps {
   readonly video: FeaturedVideo
 }
+
+export interface CoinParticle {
+  readonly id: number
+  readonly x: number
+  readonly y: number
+}
+
+export interface CoinBurstProps {
+  readonly children: ReactNode
+  readonly ariaLabel: string
+  readonly className?: string
+}
+
+export interface TickerProps {
+  readonly items: readonly string[]
+}

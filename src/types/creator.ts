@@ -13,7 +13,7 @@ export interface StatItem {
   readonly label: string
   readonly value: number
   readonly suffix: string
-  readonly description: string
+  readonly description?: string
   readonly highlight?: boolean
 }
 

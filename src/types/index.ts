@@ -8,12 +8,15 @@ export type {
 } from './creator'
 export type {
   ButtonProps,
+  CoinBurstProps,
+  CoinParticle,
   ErrorBoundaryProps,
   ErrorBoundaryState,
   PageLayoutProps,
   RevealProps,
   SectionProps,
   StatCardProps,
+  TickerProps,
   VideoCardProps,
 } from './components'
 export type { NavigationItem } from './navigation'

@@ -1,5 +1,8 @@
 export { Button } from './Button'
+export { CoinBurst } from './CoinBurst'
 export { Reveal } from './Reveal'
+export { ScrollProgress } from './ScrollProgress'
 export { Section } from './Section'
 export { StatCard } from './StatCard'
+export { Ticker } from './Ticker'
 export { VideoCard } from './VideoCard'

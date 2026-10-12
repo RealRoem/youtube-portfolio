@@ -18,15 +18,15 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   public render(): ReactNode {
     if (this.state.hasError) {
       return (
-        <main className="grid min-h-screen place-items-center bg-obsidian-950 px-6 text-center text-frost-100">
+        <main className="grid min-h-screen place-items-center bg-ink-950 px-6 text-center text-paper-100">
           <section aria-labelledby="error-title" className="max-w-xl">
-            <p className="text-sm uppercase tracking-[0.36em] text-champagne-300">
+            <p className="text-sm uppercase tracking-[0.36em] text-coin-300">
               Portfolio unavailable
             </p>
-            <h1 id="error-title" className="mt-4 text-4xl font-semibold">
+            <h1 id="error-title" className="mt-4 font-display text-4xl">
               Something failed while loading Roem&apos;s portfolio.
             </h1>
-            <p className="mt-4 text-frost-300">
+            <p className="mt-4 text-paper-300">
               Refresh the page or contact the sponsorship team directly by email.
             </p>
           </section>

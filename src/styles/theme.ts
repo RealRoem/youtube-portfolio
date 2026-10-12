@@ -1,106 +1,124 @@
 export const designTokens = {
   colors: {
-    obsidian: {
-      950: '#08090d',
-      900: '#0f1218',
-      800: '#171b24',
-      700: '#232936',
+    ink: {
+      950: '#0b0924',
+      900: '#130f3d',
+      800: '#1c1759',
+      700: '#2a2380',
+      600: '#3b32b0',
+      500: '#6a5fe0',
     },
-    champagne: {
-      100: '#fff3d1',
-      200: '#ffd36f',
-      300: '#ffb000',
-      400: '#d68a00',
+    coin: {
+      100: '#fff4bf',
+      300: '#ffd23f',
+      400: '#f5b301',
+      700: '#8a5a00',
     },
-    youtube: {
-      400: '#ff3355',
-      500: '#ff0033',
-      600: '#cc0029',
+    cash: {
+      300: '#6ee7a0',
+      400: '#34d17a',
+      700: '#0d6b3a',
     },
-    steel: {
-      100: '#f6f4ee',
-      200: '#e6e1d6',
-      300: '#c7c0b2',
-      500: '#787f8c',
-      700: '#303846',
+    sky: {
+      300: '#7dd3fc',
+      400: '#38bdf8',
     },
-    frost: {
-      100: '#f6f4ee',
-      300: '#c9c3b8',
-      500: '#8d948f',
+    pop: {
+      300: '#ff9bd2',
+      400: '#ff6ec0',
+    },
+    paper: {
+      100: '#fffdf5',
+      300: '#d4d1f5',
+      500: '#a9a5e8',
     },
     discord: '#6574d9',
   },
   shadows: {
-    glow: '0 20px 56px rgba(255, 176, 0, 0.26)',
-    cta: '0 18px 48px rgba(246, 244, 238, 0.24)',
-    panel: '0 24px 80px rgba(0, 0, 0, 0.28)',
-    premium: '0 18px 60px rgba(8, 9, 13, 0.22)',
+    block: '0 6px 0 0 #0b0924',
+    blockSm: '0 4px 0 0 #0b0924',
+    cta: '0 6px 0 0 #8a5a00',
+    ctaPressed: '0 0 0 0 #8a5a00',
+    cash: '0 6px 0 0 #0d6b3a',
+    lift: '0 10px 0 0 #0b0924',
   },
   backgrounds: {
-    cinematicRadial:
-      'radial-gradient(circle at 18% 8%, rgba(255, 176, 0, 0.1), transparent 30%), radial-gradient(circle at 82% 12%, rgba(246, 244, 238, 0.07), transparent 32%), linear-gradient(135deg, #08090d 0%, #11151d 48%, #0f1218 100%)',
+    studs: 'radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.07) 0 3px, transparent 4px)',
+    about:
+      'radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.22), transparent 38%), radial-gradient(circle at 88% 78%, rgba(255, 110, 192, 0.2), transparent 38%), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0 16px, transparent 16px 32px)',
+    receipt:
+      'repeating-linear-gradient(-45deg, rgba(110, 231, 160, 0.09) 0 12px, transparent 12px 24px)',
+    checker:
+      'conic-gradient(rgba(255, 255, 255, 0.045) 25%, transparent 0 50%, rgba(255, 255, 255, 0.045) 0 75%, transparent 0)',
+    blueprint:
+      'linear-gradient(rgba(125, 211, 252, 0.13) 2px, transparent 2px), linear-gradient(90deg, rgba(125, 211, 252, 0.13) 2px, transparent 2px)',
+    zigzagUp:
+      "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16'%3E%3Cpath d='M0 16 16 0 32 16Z' fill='%231c1759'/%3E%3C/svg%3E\")",
+    zigzagDown:
+      "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16'%3E%3Cpath d='M0 0 16 16 32 0Z' fill='%231c1759'/%3E%3C/svg%3E\")",
   },
 } as const
 
 export const theme = {
   layout: {
-    page: 'min-h-screen bg-cinematic-radial text-frost-100 antialiased',
-    sectionSurface: 'bg-obsidian-900/38',
-    sectionBlend: 'bg-gradient-to-b from-transparent via-obsidian-800/42 to-transparent',
+    page: 'min-h-screen text-paper-100 antialiased',
+    sectionHero: 'bg-ink-900 bg-studs bg-[length:32px_32px]',
+    sectionAbout: 'bg-ink-900 bg-about',
+    sectionStats: 'relative bg-ink-800 bg-receipt',
+    sectionVideos: 'bg-ink-900 bg-checker bg-[length:64px_64px]',
+    sectionSponsorship: 'bg-ink-950 bg-blueprint bg-[length:40px_40px]',
+    zigzagTop: 'pointer-events-none absolute inset-x-0 -top-4 h-4 bg-zigzag-up bg-repeat-x',
+    zigzagBottom: 'pointer-events-none absolute inset-x-0 -bottom-4 h-4 bg-zigzag-down bg-repeat-x',
   },
   text: {
-    eyebrow: 'text-sm font-medium uppercase tracking-[0.18em] text-champagne-300',
-    sectionTitle:
-      'mt-4 text-4xl font-semibold leading-tight tracking-tight text-frost-100 sm:text-6xl',
-    cardTitle: 'mt-5 text-2xl font-semibold leading-snug text-frost-100',
-    body: 'text-lg leading-8 text-frost-300',
-    cardBody: 'leading-7 text-frost-300',
+    eyebrow:
+      'inline-flex items-center rounded-lg border-2 border-ink-500 bg-ink-800 px-3 py-1 font-display text-sm uppercase tracking-wider text-sky-300',
+    sectionTitle: 'font-display text-4xl leading-[1.05] tracking-tight text-paper-100 sm:text-6xl',
+    cardTitle: 'mt-4 font-display text-2xl leading-snug text-paper-100',
+    body: 'text-lg leading-8 text-paper-300',
+    cardBody: 'leading-7 text-paper-300',
     accentLink:
-      'text-champagne-200 transition-colors duration-300 hover:text-champagne-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne-300',
+      'font-bold text-cash-300 underline decoration-2 underline-offset-4 transition-colors duration-150 hover:text-cash-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300',
   },
   icon: {
-    accent: 'text-champagne-300',
+    accent: 'text-cash-300',
   },
+  sticker:
+    'absolute z-10 rounded-lg border-4 border-ink-950 bg-pop-300 px-3 py-1 font-display text-sm uppercase tracking-wide text-ink-950 shadow-blockSm',
   surface: {
-    card: 'h-full rounded-lg border border-white/10 bg-white/[0.045] p-7 shadow-premium backdrop-blur-xl transition-[border-color,background-color,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-champagne-200/25 hover:bg-white/[0.065]',
-    panel:
-      'rounded-lg border border-champagne-200/15 bg-white/[0.055] shadow-panel backdrop-blur-xl',
+    card: 'h-full rounded-2xl border-4 border-ink-950 bg-ink-700 p-6 shadow-block transition-[transform,box-shadow] duration-150 ease-out hover:-translate-y-1 hover:animate-wiggle hover:shadow-lift sm:p-8',
+    panel: 'rounded-3xl border-4 border-ink-950 bg-ink-700 shadow-block',
     statBase:
-      'rounded-lg border p-6 backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-300 ease-out hover:-translate-y-0.5',
-    statDefault:
-      'border-white/10 bg-white/[0.045] hover:border-champagne-200/25 hover:bg-white/[0.065]',
-    statHighlight: 'border-champagne-200/25 bg-champagne-200/[0.07] shadow-panel',
+      'h-full rounded-2xl border-4 border-ink-950 p-6 shadow-block transition-[transform,box-shadow] duration-150 ease-out hover:-translate-y-1 hover:animate-wiggle hover:shadow-lift',
+    statDefault: 'bg-ink-700',
+    statHighlight: 'bg-cash-300 text-ink-950 shadow-cash',
     videoCard:
-      'group overflow-hidden rounded-lg border border-white/10 bg-white/[0.045] shadow-premium backdrop-blur-xl transition-[border-color,background-color,box-shadow,transform] duration-300 ease-out hover:-translate-y-0.5 hover:border-champagne-200/30 hover:bg-white/[0.065]',
+      'group overflow-hidden rounded-2xl border-4 border-ink-950 bg-ink-700 shadow-block transition-[transform,box-shadow] duration-150 ease-out hover:-translate-y-1 hover:animate-wiggle hover:shadow-lift',
   },
   button: {
-    base: 'inline-flex min-h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold transition-[background-color,border-color,color,box-shadow,transform] duration-300 ease-out hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian-950 sm:w-auto',
+    base: 'inline-flex min-h-12 w-full items-center justify-center rounded-xl border-4 px-6 font-display text-base uppercase tracking-wide transition-[background-color,transform,box-shadow] duration-150 ease-out hover:-translate-y-0.5 hover:animate-wiggle active:translate-y-1 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 sm:w-auto',
     variants: {
       primary:
-        'border border-white/80 bg-frost-100 text-obsidian-950 shadow-cta hover:border-white hover:bg-white focus-visible:ring-champagne-300',
+        'border-ink-950 bg-coin-300 text-ink-950 shadow-cta hover:bg-coin-100 active:shadow-ctaPressed',
       secondary:
-        'border border-white/14 bg-white/[0.08] text-frost-100 shadow-premium hover:border-champagne-200/35 hover:bg-white/[0.12] focus-visible:ring-champagne-300',
-      ghost: 'text-frost-300 hover:text-white focus-visible:ring-frost-300',
+        'border-ink-500 bg-ink-700 text-paper-100 shadow-block hover:bg-ink-600 active:shadow-none',
+      ghost: 'border-transparent text-paper-300 hover:text-paper-100',
     },
   },
   hero: {
     title:
-      'mt-6 max-w-4xl text-5xl font-semibold leading-[0.98] tracking-tight text-frost-100 sm:text-7xl lg:text-8xl',
-    body: 'mt-8 max-w-2xl text-lg leading-8 text-frost-300',
-    ambient: 'absolute inset-8 rounded-full bg-champagne-300/10 blur-3xl',
-    ambientSecondary: 'absolute -right-8 top-16 h-40 w-40 rounded-full bg-white/10 blur-3xl',
+      'mt-6 max-w-4xl font-display text-5xl leading-[1] tracking-tight text-paper-100 sm:text-7xl lg:text-8xl',
+    titleMark: 'rounded-xl bg-cash-300 px-3 text-ink-950 [box-decoration-break:clone]',
+    body: 'mt-8 max-w-2xl text-lg leading-8 text-paper-300',
+    xpTrack: 'h-4 overflow-hidden rounded-full border-4 border-ink-950 bg-ink-950',
+    xpFill: 'h-full rounded-full bg-cash-300',
     profilePanel:
-      'relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.06] p-8 shadow-panel backdrop-blur-xl sm:p-10',
-    profileBar:
-      'absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-champagne-300 via-champagne-100 to-champagne-300',
-    avatarFrame:
-      'rounded-full bg-gradient-to-br from-champagne-300 via-champagne-100 to-steel-200 p-1 shadow-glow',
-    profileTitle: 'mt-3 text-3xl font-semibold tracking-tight text-frost-100',
-    profileBody: 'mt-4 max-w-sm text-sm leading-6 text-frost-300',
-    metricCard: 'rounded-md border border-white/10 bg-obsidian-950/50 p-4 text-center',
-    metricValue: 'text-2xl font-semibold tracking-tight text-frost-100',
-    metricLabel: 'mt-1 text-xs font-medium text-frost-500',
+      'relative animate-bob rounded-3xl border-4 border-ink-950 bg-ink-700 p-8 shadow-block sm:p-10 lg:rotate-2',
+    avatarFrame: 'rounded-3xl border-4 border-ink-950 bg-sky-300 p-1 shadow-block',
+    profileTitle: 'mt-6 font-display text-4xl tracking-tight text-paper-100',
+    metricCard: 'rounded-xl border-4 border-ink-950 bg-ink-900 p-4 text-center',
+    metricValue: 'font-display text-2xl tracking-tight text-paper-100',
+    metricLabel: 'mt-1 text-xs font-bold uppercase tracking-wide text-paper-500',
   },
 } as const
 

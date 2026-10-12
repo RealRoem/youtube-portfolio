@@ -18,7 +18,6 @@ const standardStat: StatItem = {
   label: 'Standard metric',
   value: 35200,
   suffix: '+',
-  description: 'Description for standard metric.',
 }
 
 describe('StatCard', (): void => {
@@ -27,14 +26,14 @@ describe('StatCard', (): void => {
       renderWithProviders(<StatCard stat={stat} />)
 
       expect(screen.getByText(stat.label)).toBeInTheDocument()
-      expect(screen.getByText(stat.description)).toBeInTheDocument()
+      expect(screen.getByText('Description for highlighted metric.')).toBeInTheDocument()
     })
 
-    it('should render standard stats without the highlight treatment', (): void => {
+    it('should render standard stats without a description', (): void => {
       renderWithProviders(<StatCard stat={standardStat} />)
 
       expect(screen.getByText(standardStat.label)).toBeInTheDocument()
-      expect(screen.getByText(standardStat.description)).toBeInTheDocument()
+      expect(screen.queryByText(/Description/)).not.toBeInTheDocument()
     })
   })
 })
